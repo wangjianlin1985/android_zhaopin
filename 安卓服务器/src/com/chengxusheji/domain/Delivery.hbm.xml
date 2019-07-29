@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="Delivery" table="Delivery">
+
+          <!-- 主键投递id -->
+          <id name="deliveryId" column="deliveryId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 多对一属性: 投递的职位 -->
+          <many-to-one name="jobObj"
+            column="jobObj"
+            class="Job"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 多对一属性: 投递人 -->
+          <many-to-one name="userObj"
+            column="userObj"
+            class="UserInfo"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 投递时间 -->
+          <property
+            name="deliveryTime"
+            column="deliveryTime"
+            type="string"
+            length="20"
+          />
+
+          <!-- 多对一属性: 投递状态 -->
+          <many-to-one name="stateObj"
+            column="stateObj"
+            class="DeliveryState"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 企业回复 -->
+          <property
+            name="deliveryDemo"
+            column="deliveryDemo"
+            type="string"
+            length="500"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

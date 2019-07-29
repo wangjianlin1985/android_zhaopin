@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="UserInfo" table="UserInfo">
+
+          <!-- 主键用户名 -->
+          <id name="user_name" type="string" length="20">
+            <generator class="assigned"/>
+          </id>
+
+          <!-- 简单字符串属性: 登录密码 -->
+          <property
+            name="password"
+            column="password"
+            type="string"
+            length="30"
+          />
+
+          <!-- 简单字符串属性: 姓名 -->
+          <property
+            name="name"
+            column="name"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 性别 -->
+          <property
+            name="gender"
+            column="gender"
+            type="string"
+            length="4"
+          />
+
+          <!-- 简单日期型属性: 出生日期 -->
+          <property
+            name="birthDate"
+            column="birthDate"
+            	type="timestamp"
+            	length="10"
+          />
+
+          <!-- 简单图片属性: 用户照片 -->
+          <property
+            name="userPhoto"
+            column="userPhoto"
+            type="string"
+            length="50"
+          />
+
+          <!-- 多对一属性: 学历 -->
+          <many-to-one name="myShoolRecord"
+            column="myShoolRecord"
+            class="SchoolRecord"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 毕业学校 -->
+          <property
+            name="schoolName"
+            column="schoolName"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 工作经验 -->
+          <property
+            name="workYears"
+            column="workYears"
+            type="string"
+            length="50"
+          />
+
+          <!-- 简单字符串属性: 联系电话 -->
+          <property
+            name="telephone"
+            column="telephone"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 邮箱 -->
+          <property
+            name="email"
+            column="email"
+            type="string"
+            length="50"
+          />
+
+          <!-- 简单字符串属性: 现居地址 -->
+          <property
+            name="address"
+            column="address"
+            type="string"
+            length="80"
+          />
+
+          <!-- 简单字符串属性: 求职意向 -->
+          <property
+            name="qzyx"
+            column="qzyx"
+            type="string"
+            length="800"
+          />
+
+          <!-- 简单字符串属性: 工作经历 -->
+          <property
+            name="gzjl"
+            column="gzjl"
+            type="string"
+            length="800"
+          />
+
+          <!-- 简单字符串属性: 教育经历 -->
+          <property
+            name="jyjl"
+            column="jyjl"
+            type="string"
+            length="800"
+          />
+
+          <!-- 简单字符串属性: 自我评价 -->
+          <property
+            name="zwpj"
+            column="zwpj"
+            type="string"
+            length="800"
+          />
+
+          <!-- 简单字符串属性: 注册时间 -->
+          <property
+            name="regTime"
+            column="regTime"
+            type="string"
+            length="30"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

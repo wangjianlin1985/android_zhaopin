@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="NewsClass" table="NewsClass">
+
+          <!-- 主键新闻分类id -->
+          <id name="newsClassId" column="newsClassId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 简单字符串属性: 新闻分类名称 -->
+          <property
+            name="newsClassName"
+            column="newsClassName"
+            type="string"
+            length="20"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

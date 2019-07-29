@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mobileclient.activity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+         android:targetSdkVersion="8"
+         /> 
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:name="com.mobileclient.app.Declare">
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="MainActivity"></activity>
+        <activity android:name="MoreActivity"></activity>
+        <activity android:name="AboutActivity"></activity>
+        <activity android:name="RegisterActivity"></activity>
+        <activity android:name="MainMenuActivity"></activity>
+        <activity android:name="UserInfoListActivity"></activity>
+        <activity android:name="UserInfoQueryActivity"></activity>
+        <activity android:name="UserInfoAddActivity"></activity>
+        <activity android:name="UserInfoEditActivity"></activity>
+        <activity android:name="UserInfoDetailActivity"></activity>
+        <activity android:name="SchoolRecordListActivity"></activity>
+        <activity android:name="SchoolRecordQueryActivity"></activity>
+        <activity android:name="SchoolRecordAddActivity"></activity>
+        <activity android:name="SchoolRecordEditActivity"></activity>
+        <activity android:name="SchoolRecordDetailActivity"></activity>
+        <activity android:name="QiyeListActivity"></activity>
+        <activity android:name="QiyeQueryActivity"></activity>
+        <activity android:name="QiyeAddActivity"></activity>
+        <activity android:name="QiyeEditActivity"></activity>
+        <activity android:name="QiyeDetailActivity"></activity>
+        <activity android:name="QiyePropertyListActivity"></activity>
+        <activity android:name="QiyePropertyQueryActivity"></activity>
+        <activity android:name="QiyePropertyAddActivity"></activity>
+        <activity android:name="QiyePropertyEditActivity"></activity>
+        <activity android:name="QiyePropertyDetailActivity"></activity>
+        <activity android:name="QiyeProfessionListActivity"></activity>
+        <activity android:name="QiyeProfessionQueryActivity"></activity>
+        <activity android:name="QiyeProfessionAddActivity"></activity>
+        <activity android:name="QiyeProfessionEditActivity"></activity>
+        <activity android:name="QiyeProfessionDetailActivity"></activity>
+        <activity android:name="JobListActivity"></activity>
+        <activity android:name="JobQueryActivity"></activity>
+        <activity android:name="JobAddActivity"></activity>
+        <activity android:name="JobEditActivity"></activity>
+        <activity android:name="JobDetailActivity"></activity>
+        <activity android:name="JobTypeListActivity"></activity>
+        <activity android:name="JobTypeQueryActivity"></activity>
+        <activity android:name="JobTypeAddActivity"></activity>
+        <activity android:name="JobTypeEditActivity"></activity>
+        <activity android:name="JobTypeDetailActivity"></activity>
+        <activity android:name="SpecialInfoListActivity"></activity>
+        <activity android:name="SpecialInfoQueryActivity"></activity>
+        <activity android:name="SpecialInfoAddActivity"></activity>
+        <activity android:name="SpecialInfoEditActivity"></activity>
+        <activity android:name="SpecialInfoDetailActivity"></activity>
+        <activity android:name="DeliveryListActivity"></activity>
+        <activity android:name="DeliveryQueryActivity"></activity>
+        <activity android:name="DeliveryAddActivity"></activity>
+        <activity android:name="DeliveryEditActivity"></activity>
+        <activity android:name="DeliveryDetailActivity"></activity>
+        <activity android:name="DeliveryStateListActivity"></activity>
+        <activity android:name="DeliveryStateQueryActivity"></activity>
+        <activity android:name="DeliveryStateAddActivity"></activity>
+        <activity android:name="DeliveryStateEditActivity"></activity>
+        <activity android:name="DeliveryStateDetailActivity"></activity>
+        <activity android:name="JobWantListActivity"></activity>
+        <activity android:name="JobWantQueryActivity"></activity>
+        <activity android:name="JobWantAddActivity"></activity>
+        <activity android:name="JobWantEditActivity"></activity>
+        <activity android:name="JobWantDetailActivity"></activity>
+        <activity android:name="NewsListActivity"></activity>
+        <activity android:name="NewsQueryActivity"></activity>
+        <activity android:name="NewsAddActivity"></activity>
+        <activity android:name="NewsEditActivity"></activity>
+        <activity android:name="NewsDetailActivity"></activity>
+        <activity android:name="NewsClassListActivity"></activity>
+        <activity android:name="NewsClassQueryActivity"></activity>
+        <activity android:name="NewsClassAddActivity"></activity>
+        <activity android:name="NewsClassEditActivity"></activity>
+        <activity android:name="NewsClassDetailActivity"></activity>
+
+        <activity android:name="photoListActivity"></activity>
+        <activity android:name="fileListActivity"></activity>
+    </application>
+
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+
+	<!-- 文件读写权限 -->
+	
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"></uses-permission>
+	
+	
+</manifest>

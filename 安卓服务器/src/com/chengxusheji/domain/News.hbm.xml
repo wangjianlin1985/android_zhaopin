@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="News" table="News">
+
+          <!-- 主键新闻id -->
+          <id name="newsId" column="newsId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 多对一属性: 新闻分类 -->
+          <many-to-one name="newsClassObj"
+            column="newsClassObj"
+            class="NewsClass"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 标题 -->
+          <property
+            name="title"
+            column="title"
+            type="string"
+            length="80"
+          />
+
+          <!-- 简单字符串属性: 新闻内容 -->
+          <property
+            name="content"
+            column="content"
+            type="string"
+            length="5000"
+          />
+
+          <!-- 简单字符串属性: 发布时间 -->
+          <property
+            name="publishDate"
+            column="publishDate"
+            type="string"
+            length="30"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

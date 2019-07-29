@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="JobWant" table="JobWant">
+
+          <!-- 主键记录id -->
+          <id name="wantId" column="wantId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 多对一属性: 职位分类 -->
+          <many-to-one name="jobTypeObj"
+            column="jobTypeObj"
+            class="JobType"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 多对一属性: 求职专业 -->
+          <many-to-one name="specialObj"
+            column="specialObj"
+            class="SpecialInfo"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 职位名称 -->
+          <property
+            name="positionName"
+            column="positionName"
+            type="string"
+            length="50"
+          />
+
+          <!-- 简单字符串属性: 期望薪资 -->
+          <property
+            name="salary"
+            column="salary"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 工作地点 -->
+          <property
+            name="workCity"
+            column="workCity"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 备注说明 -->
+          <property
+            name="wantMemo"
+            column="wantMemo"
+            type="string"
+            length="800"
+          />
+
+          <!-- 多对一属性: 求职人 -->
+          <many-to-one name="userObj"
+            column="userObj"
+            class="UserInfo"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 发布时间 -->
+          <property
+            name="addTime"
+            column="addTime"
+            type="string"
+            length="20"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

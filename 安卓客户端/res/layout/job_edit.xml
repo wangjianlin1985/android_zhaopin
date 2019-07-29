@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F5F5F5"
+    android:orientation="vertical" >
+
+<include layout="@layout/title" />
+
+<ScrollView
+ android:layout_width="fill_parent" 
+ android:layout_height="wrap_content">
+<LinearLayout 
+	android:orientation="vertical" 
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:background="@android:color/white">
+	<TableLayout
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:stretchColumns="1">
+	    <TableRow android:layout_marginTop="8dp">
+			<TextView 
+				android:text="职位id："
+				android:id="@+id/TV_jobId_Label"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:textColor="@color/hint_color"
+				android:layout_weight="1.5"/>
+			<TextView
+				android:text=""
+				android:id="@+id/TV_jobId"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="4"/>
+		</TableRow>
+
+		<TableRow android:layout_marginTop="5dp">
+			<TextView 
+				android:text="招聘企业：" 
+				android:id="@+id/TV_qiyeObj"
+				android:layout_width="0dp" 
+				android:layout_height="wrap_content"
+				android:layout_weight="1.5"
+				android:textColor="@color/hint_color" />
+			<Spinner 
+				android:id="@+id/Spinner_qiyeObj" 
+				android:layout_width="0dp" 
+				android:layout_height="wrap_content"
+				android:layout_weight="4"
+				android:layout_marginRight="5dp"/>
+		</TableRow>
+
+		<TableRow android:layout_marginTop="5dp">
+			<TextView 
+				android:text="招聘职位：" 
+				android:id="@+id/TV_positionName"
+				android:layout_width="0dp" 
+				android:layout_height="wrap_content"
+				android:layout_weight="1.5"
+				android:textColor="@color/hint_color" />
+			<EditText 
+				android:text="" 
+				android:id="@+id/ET_positionName" 
+				android:layout_width="0dp"
+				android:layout_height="40dp"
+				android:layout_weight="4"
+				android:layout_marginTop="5dip"
+				android:background="@drawable/btn_item_medium_default"
+				android:drawableLeft="@drawable/ic_user_pwd"
+				android:drawablePadding="10dp"
+				android:gravity="center_vertical"
+				android:paddingLeft="4dp"
+				android:layout_marginRight="5dp"
+				android:singleLine="true" />
+		</TableRow>
+
+		<TableRow android:layout_marginTop="5dp">
+			<TextView 
+				android:text="职位分类：" 
+				android:id="@+id/TV_jobTypeObj"
+				android:layout_width="0dp" 
+				android:layout_height="wrap_content"
+				android:layout_weight="1.5"
+				android:textColor="@color/hint_color" />
+			<Spinner 
+				android:id="@+id/Spinner_jobTypeObj" 
+				android:layout_width="0dp" 
+				android:layout_height="wrap_content"
+				android:layout_weight="4"
+				android:layout_marginRight="5dp"/>
+		</TableRow>
+
+		<TableRow android:layout_marginTop="5dp">
+			<TextView 
+				android:text="所属专业：" 
+				android:id="@+id/TV_specialObj"
+				android:layout_width="0dp" 
+				android:layout_height="wrap_content"
+				android:layout_weight="1.5"
+				android:textColor="@color/hint_color" />
+			<Spinner 
+				android:id="@+id/Spinner_specialObj" 
+				android:layout_width="0dp" 
+				android:layout_height="wrap_content"
+				android:layout_weight="4"
+				android:layout_marginRight="5dp"/>
+		</TableRow>
+
+		<TableRow android:layout_marginTop="5dp">
+			<TextView 
+				android:text="招聘人数：" 
+				android:id="@+id/TV_personNum"
+				android:layout_width="0dp" 
+				android:layout_height="wrap_content"
+				android:layout_weight="1.5"
+				android:textColor="@color/hint_color" />
+			<EditText 
+				android:text="" 
+				android:id="@+id/ET_personNum" 
+				android:layout_width="0dp"
+				android:layout_height="40dp"
+				android:layout_weight="4"
+				android:layout_marginTop="5dip"
+				android:background="@drawable/btn_item_medium_default"
+				android:drawableLeft="@drawable/ic_user_pwd"
+				android:drawablePadding="10dp"
+				android:gravity="center_vertical"
+				android:paddingLeft="4dp"
+				android:layout_marginRight="5dp"
+				android:singleLine="true" />
+		</TableRow>
+
+		<TableRow android:layout_marginTop="5dp">
+			<TextView 
+				android:text="所在城市：" 
+				android:id="@+id/TV_city"
+				android:layout_width="0dp" 
+				android:layout_height="wrap_content"
+				android:layout_weight="1.5"
+				android:textColor="@color/hint_color" />
+			<EditText 
+				android:text="" 
+				android:id="@+id/ET_city" 
+				android:layout_width="0dp"
+				android:layout_height="40dp"
+				android:layout_weight="4"
+				android:layout_marginTop="5dip"
+				android:background="@drawable/btn_item_medium_default"
+				android:drawableLeft="@drawable/ic_user_pwd"
+				android:drawablePadding="10dp"
+				android:gravity="center_vertical"
+				android:paddingLeft="4dp"
+				android:layout_marginRight="5dp"
+				android:singleLine="true" />
+		</TableRow>
+
+		<TableRow android:layout_marginTop="5dp">
+			<TextView 
+				android:text="薪资待遇：" 
+				android:id="@+id/TV_salary"
+				android:layout_width="0dp" 
+				android:layout_height="wrap_content"
+				android:layout_weight="1.5"
+				android:textColor="@color/hint_color" />
+			<EditText 
+				android:text="" 
+				android:id="@+id/ET_salary" 
+				android:layout_width="0dp"
+				android:layout_height="40dp"
+				android:layout_weight="4"
+				android:layout_marginTop="5dip"
+				android:background="@drawable/btn_item_medium_default"
+				android:drawableLeft="@drawable/ic_user_pwd"
+				android:drawablePadding="10dp"
+				android:gravity="center_vertical"
+				android:paddingLeft="4dp"
+				android:layout_marginRight="5dp"
+				android:singleLine="true" />
+		</TableRow>
+
+		<TableRow android:layout_marginTop="5dp">
+			<TextView 
+				android:text="学历要求：" 
+				android:id="@+id/TV_schoolRecordObj"
+				android:layout_width="0dp" 
+				android:layout_height="wrap_content"
+				android:layout_weight="1.5"
+				android:textColor="@color/hint_color" />
+			<Spinner 
+				android:id="@+id/Spinner_schoolRecordObj" 
+				android:layout_width="0dp" 
+				android:layout_height="wrap_content"
+				android:layout_weight="4"
+				android:layout_marginRight="5dp"/>
+		</TableRow>
+
+		<TableRow android:layout_marginTop="5dp">
+			<TextView 
+				android:text="工作年限：" 
+				android:id="@+id/TV_workYears"
+				android:layout_width="0dp" 
+				android:layout_height="wrap_content"
+				android:layout_weight="1.5"
+				android:textColor="@color/hint_color" />
+			<EditText 
+				android:text="" 
+				android:id="@+id/ET_workYears" 
+				android:layout_width="0dp"
+				android:layout_height="40dp"
+				android:layout_weight="4"
+				android:layout_marginTop="5dip"
+				android:background="@drawable/btn_item_medium_default"
+				android:drawableLeft="@drawable/ic_user_pwd"
+				android:drawablePadding="10dp"
+				android:gravity="center_vertical"
+				android:paddingLeft="4dp"
+				android:layout_marginRight="5dp"
+				android:singleLine="true" />
+		</TableRow>
+
+		<TableRow android:layout_marginTop="5dp">
+			<TextView 
+				android:text="工作地址：" 
+				android:id="@+id/TV_workAddress"
+				android:layout_width="0dp" 
+				android:layout_height="wrap_content"
+				android:layout_weight="1.5"
+				android:textColor="@color/hint_color" />
+			<EditText 
+				android:text="" 
+				android:id="@+id/ET_workAddress" 
+				android:layout_width="0dp"
+				android:layout_height="40dp"
+				android:layout_weight="4"
+				android:layout_marginTop="5dip"
+				android:background="@drawable/btn_item_medium_default"
+				android:drawableLeft="@drawable/ic_user_pwd"
+				android:drawablePadding="10dp"
+				android:gravity="center_vertical"
+				android:paddingLeft="4dp"
+				android:layout_marginRight="5dp"
+				android:singleLine="true" />
+		</TableRow>
+
+		<TableRow android:layout_marginTop="5dp">
+			<TextView 
+				android:text="福利待遇：" 
+				android:id="@+id/TV_welfare"
+				android:layout_width="0dp" 
+				android:layout_height="wrap_content"
+				android:layout_weight="1.5"
+				android:textColor="@color/hint_color" />
+			<EditText 
+				android:text="" 
+				android:id="@+id/ET_welfare" 
+				android:layout_width="0dp"
+				android:layout_height="200dp"
+				android:layout_weight="4"
+				android:layout_marginTop="5dip"
+				android:background="@drawable/btn_item_medium_default"
+				android:drawableLeft="@drawable/ic_user_pwd"
+				android:drawablePadding="5dp"
+				android:ellipsize="end"
+				android:gravity="top"
+				android:inputType="textMultiLine"
+				android:singleLine="false"
+				android:scrollHorizontally="false"
+				android:layout_marginRight="5dp" />
+		</TableRow>
+
+		<TableRow android:layout_marginTop="5dp">
+			<TextView 
+				android:text="岗位要求：" 
+				android:id="@+id/TV_positionDesc"
+				android:layout_width="0dp" 
+				android:layout_height="wrap_content"
+				android:layout_weight="1.5"
+				android:textColor="@color/hint_color" />
+			<EditText 
+				android:text="" 
+				android:id="@+id/ET_positionDesc" 
+				android:layout_width="0dp"
+				android:layout_height="200dp"
+				android:layout_weight="4"
+				android:layout_marginTop="5dip"
+				android:background="@drawable/btn_item_medium_default"
+				android:drawableLeft="@drawable/ic_user_pwd"
+				android:drawablePadding="5dp"
+				android:ellipsize="end"
+				android:gravity="top"
+				android:inputType="textMultiLine"
+				android:singleLine="false"
+				android:scrollHorizontally="false"
+				android:layout_marginRight="5dp" />
+		</TableRow>
+
+		<TableRow android:layout_marginTop="5dp">
+			<TextView 
+				android:text="联系人：" 
+				android:id="@+id/TV_connectPerson"
+				android:layout_width="0dp" 
+				android:layout_height="wrap_content"
+				android:layout_weight="1.5"
+				android:textColor="@color/hint_color" />
+			<EditText 
+				android:text="" 
+				android:id="@+id/ET_connectPerson" 
+				android:layout_width="0dp"
+				android:layout_height="40dp"
+				android:layout_weight="4"
+				android:layout_marginTop="5dip"
+				android:background="@drawable/btn_item_medium_default"
+				android:drawableLeft="@drawable/ic_user_pwd"
+				android:drawablePadding="10dp"
+				android:gravity="center_vertical"
+				android:paddingLeft="4dp"
+				android:layout_marginRight="5dp"
+				android:singleLine="true" />
+		</TableRow>
+
+		<TableRow android:layout_marginTop="5dp">
+			<TextView 
+				android:text="联系电话：" 
+				android:id="@+id/TV_telephone"
+				android:layout_width="0dp" 
+				android:layout_height="wrap_content"
+				android:layout_weight="1.5"
+				android:textColor="@color/hint_color" />
+			<EditText 
+				android:text="" 
+				android:id="@+id/ET_telephone" 
+				android:layout_width="0dp"
+				android:layout_height="40dp"
+				android:layout_weight="4"
+				android:layout_marginTop="5dip"
+				android:background="@drawable/btn_item_medium_default"
+				android:drawableLeft="@drawable/ic_user_pwd"
+				android:drawablePadding="10dp"
+				android:gravity="center_vertical"
+				android:paddingLeft="4dp"
+				android:layout_marginRight="5dp"
+				android:singleLine="true" />
+		</TableRow>
+
+	</TableLayout>
+	<LinearLayout 
+		android:orientation="vertical" 
+		android:layout_width="fill_parent"
+		android:layout_height="80dp" 
+		android:gravity="center">
+		   <Button 
+				android:text="更新" 
+				android:id="@+id/BtnUpdate"
+ 				android:layout_width="match_parent"
+				android:layout_height="48dp"
+				android:layout_marginLeft="5dip"
+				android:layout_marginRight="5dip"
+				android:layout_marginTop="5dip"
+				android:background="#D64F4D"
+				android:textColor="@color/white" /> 
+	</LinearLayout> 
+  </LinearLayout>
+</ScrollView>
+</LinearLayout>
+
