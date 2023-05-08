@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="Job" table="Job">
+
+          <!-- 主键职位id -->
+          <id name="jobId" column="jobId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 多对一属性: 招聘企业 -->
+          <many-to-one name="qiyeObj"
+            column="qiyeObj"
+            class="Qiye"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 招聘职位 -->
+          <property
+            name="positionName"
+            column="positionName"
+            type="string"
+            length="40"
+          />
+
+          <!-- 多对一属性: 职位分类 -->
+          <many-to-one name="jobTypeObj"
+            column="jobTypeObj"
+            class="JobType"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 多对一属性: 所属专业 -->
+          <many-to-one name="specialObj"
+            column="specialObj"
+            class="SpecialInfo"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 招聘人数 -->
+          <property
+            name="personNum"
+            column="personNum"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 所在城市 -->
+          <property
+            name="city"
+            column="city"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 薪资待遇 -->
+          <property
+            name="salary"
+            column="salary"
+            type="string"
+            length="20"
+          />
+
+          <!-- 多对一属性: 学历要求 -->
+          <many-to-one name="schoolRecordObj"
+            column="schoolRecordObj"
+            class="SchoolRecord"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 工作年限 -->
+          <property
+            name="workYears"
+            column="workYears"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 工作地址 -->
+          <property
+            name="workAddress"
+            column="workAddress"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 福利待遇 -->
+          <property
+            name="welfare"
+            column="welfare"
+            type="string"
+            length="800"
+          />
+
+          <!-- 简单字符串属性: 岗位要求 -->
+          <property
+            name="positionDesc"
+            column="positionDesc"
+            type="string"
+            length="800"
+          />
+
+          <!-- 简单字符串属性: 联系人 -->
+          <property
+            name="connectPerson"
+            column="connectPerson"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 联系电话 -->
+          <property
+            name="telephone"
+            column="telephone"
+            type="string"
+            length="20"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

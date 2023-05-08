@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="Qiye" table="Qiye">
+
+          <!-- 主键企业账号 -->
+          <id name="qiyeUserName" type="string" length="20">
+            <generator class="assigned"/>
+          </id>
+
+          <!-- 简单字符串属性: 登录密码 -->
+          <property
+            name="password"
+            column="password"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 企业名称 -->
+          <property
+            name="qiyeName"
+            column="qiyeName"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 企业资质 -->
+          <property
+            name="qiyeQualify"
+            column="qiyeQualify"
+            type="string"
+            length="40"
+          />
+
+          <!-- 多对一属性: 企业性质 -->
+          <many-to-one name="qiyePropertyObj"
+            column="qiyePropertyObj"
+            class="QiyeProperty"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 多对一属性: 企业行业 -->
+          <many-to-one name="qiyeProfessionObj"
+            column="qiyeProfessionObj"
+            class="QiyeProfession"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 企业规模 -->
+          <property
+            name="qiyeScale"
+            column="qiyeScale"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 联系人 -->
+          <property
+            name="connectPerson"
+            column="connectPerson"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 联系电话 -->
+          <property
+            name="telephone"
+            column="telephone"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 企业邮箱 -->
+          <property
+            name="email"
+            column="email"
+            type="string"
+            length="30"
+          />
+
+          <!-- 简单字符串属性: 企业地址 -->
+          <property
+            name="address"
+            column="address"
+            type="string"
+            length="80"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

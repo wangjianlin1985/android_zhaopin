@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+ android:layout_width="fill_parent" 
+ android:layout_height="fill_parent"
+xmlns:android="http://schemas.android.com/apk/res/android">  
+<LinearLayout 
+	android:orientation="vertical" 
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@android:color/white">
+	<include layout="@layout/title" />
+	<TableLayout
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent" 
+		android:stretchColumns="1">
+		<TableRow> 
+			<TextView 
+				android:text="企业账号：" 
+				android:id="@+id/TV_qiyeUserName"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:textColor="#0000ff"/>
+			<EditText
+				android:text="" 
+				android:id="@+id/ET_qiyeUserName"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:singleLine="true"
+				android:ellipsize="end"/>
+		</TableRow>
+		<TableRow> 
+			<TextView 
+				android:text="企业名称：" 
+				android:id="@+id/TV_qiyeName"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:textColor="#0000ff"/>
+			<EditText
+				android:text="" 
+				android:id="@+id/ET_qiyeName"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:singleLine="true"
+				android:ellipsize="end"/>
+		</TableRow>
+		<TableRow> 
+			<TextView 
+				android:text="企业性质：" 
+				android:id="@+id/TV_qiyePropertyObj"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:textColor="#0000ff"/>
+			<Spinner android:id="@+id/Spinner_qiyePropertyObj" 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"/>
+		</TableRow>
+		<TableRow> 
+			<TextView 
+				android:text="企业行业：" 
+				android:id="@+id/TV_qiyeProfessionObj"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:textColor="#0000ff"/>
+			<Spinner android:id="@+id/Spinner_qiyeProfessionObj" 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"/>
+		</TableRow>
+		<TableRow> 
+			<TextView 
+				android:text="联系人：" 
+				android:id="@+id/TV_connectPerson"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:textColor="#0000ff"/>
+			<EditText
+				android:text="" 
+				android:id="@+id/ET_connectPerson"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:singleLine="true"
+				android:ellipsize="end"/>
+		</TableRow>
+		<TableRow> 
+			<TextView 
+				android:text="联系电话：" 
+				android:id="@+id/TV_telephone"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:textColor="#0000ff"/>
+			<EditText
+				android:text="" 
+				android:id="@+id/ET_telephone"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:singleLine="true"
+				android:ellipsize="end"/>
+		</TableRow>
+	</TableLayout>
+	<LinearLayout 
+		android:orientation="horizontal" 
+		android:layout_width="fill_parent"
+		android:layout_height="55dp" 
+		android:gravity="center">  
+		   <Button  
+				android:text="查询"
+				android:id="@+id/btnQuery"
+				android:layout_width="match_parent"
+				android:layout_height="48dp" 
+				android:layout_marginLeft="10dip"
+				android:layout_marginRight="10dip"
+				android:layout_marginTop="5dip"
+				android:background="#D64F4D"
+				android:textColor="@color/white" /> 
+	</LinearLayout>
+  </LinearLayout>
+</ScrollView>
+
+
+

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="SpecialInfo" table="SpecialInfo">
+
+          <!-- 主键专业id -->
+          <id name="specialId" column="specialId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 简单字符串属性: 专业名称 -->
+          <property
+            name="specialName"
+            column="specialName"
+            type="string"
+            length="20"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 
